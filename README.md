@@ -1,2 +1,3 @@
 # PD-33-OPGKKTENAU
-Shvetsov Vladislav, Sardanov Volodymyr,  Kosenko Andrew
+Shvetsov Vladislav, Sardanov Volodymyr,  Kosenko Andrew, Lugina Alexandr
+
