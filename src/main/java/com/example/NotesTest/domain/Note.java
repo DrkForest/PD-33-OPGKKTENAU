@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+//Entity - (обьект)схема обьекта для хранения записей в базе данных
 @Entity // This tells Hibernate to make a table out of this class
 public class Note {
     @Id
