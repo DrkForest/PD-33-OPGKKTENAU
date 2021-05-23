@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import java.util.Map;
 
+//Controller — контроль запросов от Frontend, их обработка и ответ, так же общение с сервисами.
+
 @Controller
 public class GreetingController {
 

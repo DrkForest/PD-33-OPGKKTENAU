@@ -3,6 +3,9 @@ package com.example.NotesTest.domain;
 import javax.persistence.*;
 
 @SuppressWarnings("JpaAttributeTypeInspection")
+
+//Entity - (обьект)схема обьекта для хранения записей в базе данных
+
 @Entity // This tells Hibernate to make a table out of this class
 public class Note {
     @Id
