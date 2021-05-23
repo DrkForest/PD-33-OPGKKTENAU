@@ -2,9 +2,11 @@ package com.example.NotesTest;
 
 //class
 import com.example.NotesTest.domain.Note;
+import com.example.NotesTest.domain.User;
 import com.example.NotesTest.repos.NoteRepos;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,16 +20,20 @@ public class MainController {
     private NoteRepos noteRepos;
 
 
-    @GetMapping
+    @GetMapping("/main")
     public String main(Map<String, Object> model) {
         Iterable<Note> notes = noteRepos.findAll();
 
         model.put("notes", notes);
         return "main";
     }
-    @PostMapping
-    public String add(@RequestParam String text, @RequestParam String date, Map<String, Object> model){
-        Note note = new Note(text, date);
+    @PostMapping("/main")
+    public String add(
+            @AuthenticationPrincipal User user,
+            @RequestParam String text,
+              @RequestParam String date,
+              Map<String, Object> model){
+        Note note = new Note(text, date, user);
 
         noteRepos.save(note);
 
