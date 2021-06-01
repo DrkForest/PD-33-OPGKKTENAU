@@ -2,7 +2,7 @@
 <body>
 
     <div>
-        // th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!
+<!--         th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!-->
         <form action="/logout" method="post">
             <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
             <input type="submit" value="Sign Out"/>
