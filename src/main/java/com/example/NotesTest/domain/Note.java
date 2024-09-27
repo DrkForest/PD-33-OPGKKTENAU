@@ -21,7 +21,7 @@ public class Note {
     private User user;
 
 
-    public Note() {
+    public Note(String text, String date) {
 
     }
 
